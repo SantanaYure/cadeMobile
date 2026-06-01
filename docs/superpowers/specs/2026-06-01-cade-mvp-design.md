@@ -199,7 +199,8 @@ Puros, sem UI, retorno previsível.
   alerta de duplicata, status da IA), `FileList` (`FlatList`), `DuplicateWarning`.
 - **ai:** `AiSuggestionCard` (fundo suave com destaque `#D3E601`, `reason`, ações revisar),
   `AiSuggestionBadge`.
-- **layout:** `Screen` (safe area + padding lateral 16), `SectionHeader`.
+- **layout:** `Screen` (padding lateral 16 + espaçamento superior via `StatusBar.currentHeight`
+  do React Native no Android, sem dependência nova de safe area), `SectionHeader`.
 
 Linguagem da IA: assistiva ("Sugestão", "Possível duplicata", "Você pode revisar antes de
 aplicar"). Nunca autoritativa.
