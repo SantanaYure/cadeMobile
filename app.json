@@ -10,6 +10,7 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.cademobile.app",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -20,6 +21,15 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-font",
+      "expo-document-picker"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "7afa13d2-7acf-4750-b9b5-3a25324d8972"
+      }
     }
   }
 }
