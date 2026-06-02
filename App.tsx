@@ -1,20 +1,38 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useFonts } from "expo-font";
+import { ActivityIndicator, StyleSheet, View } from "react-native";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import { ConfirmationProvider } from "./src/hooks/useConfirmation";
+import { FilesProvider } from "./src/hooks/useFiles";
+import { HomeScreen } from "./src/screens/HomeScreen";
+import { appFonts, colors } from "./src/theme";
 
 export default function App() {
+  const [fontsLoaded, fontError] = useFonts({ ...appFonts });
+
+  if (!fontsLoaded && !fontError) {
+    return (
+      <View style={styles.boot}>
+        <ActivityIndicator color={colors.primary} size="large" />
+      </View>
+    );
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider>
+      <ConfirmationProvider>
+        <FilesProvider>
+          <HomeScreen />
+        </FilesProvider>
+      </ConfirmationProvider>
+    </SafeAreaProvider>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  boot: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: colors.background,
   },
 });

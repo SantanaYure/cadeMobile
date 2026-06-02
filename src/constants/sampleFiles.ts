@@ -1,0 +1,138 @@
+import { FileItem } from "../types";
+
+const DOCX_MIME =
+  "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+
+/**
+ * Conjunto de arquivos de exemplo para demonstrar o app sem precisar selecionar
+ * arquivos reais. Inclui versões parecidas, possíveis duplicatas e nomes que
+ * geram sugestões da IA (categoria, renomear, versão mais recente).
+ *
+ * A `category` aqui é a inferida pela extensão (documents/images), de propósito,
+ * para que a IA possa sugerir categorias melhores (financeiro, trabalho, etc.).
+ */
+export const SAMPLE_FILES: FileItem[] = [
+  {
+    id: "sample-relatorio-1",
+    name: "relatorio_final.docx",
+    uri: "file:///exemplos/relatorio_final.docx",
+    size: 245760,
+    mimeType: DOCX_MIME,
+    type: "docx",
+    category: "documents",
+    updatedAt: "2026-05-10T09:30:00.000Z",
+    createdAt: "2026-05-02T08:00:00.000Z",
+  },
+  {
+    id: "sample-relatorio-2",
+    name: "relatorio_final_v2.docx",
+    uri: "file:///exemplos/relatorio_final_v2.docx",
+    size: 245760,
+    mimeType: DOCX_MIME,
+    type: "docx",
+    category: "documents",
+    updatedAt: "2026-05-12T14:10:00.000Z",
+    createdAt: "2026-05-12T14:10:00.000Z",
+  },
+  {
+    id: "sample-relatorio-3",
+    name: "relatorio_FINAL_agora_vai.docx",
+    uri: "file:///exemplos/relatorio_FINAL_agora_vai.docx",
+    size: 251904,
+    mimeType: DOCX_MIME,
+    type: "docx",
+    category: "documents",
+    updatedAt: "2026-05-15T18:45:00.000Z",
+    createdAt: "2026-05-15T18:45:00.000Z",
+  },
+  {
+    id: "sample-nota-fiscal",
+    name: "nota_fiscal_abril.pdf",
+    uri: "file:///exemplos/nota_fiscal_abril.pdf",
+    size: 102400,
+    mimeType: "application/pdf",
+    type: "pdf",
+    category: "documents",
+    updatedAt: "2026-04-02T11:00:00.000Z",
+  },
+  {
+    id: "sample-fatura",
+    name: "fatura_cartao_maio.pdf",
+    uri: "file:///exemplos/fatura_cartao_maio.pdf",
+    size: 88064,
+    mimeType: "application/pdf",
+    type: "pdf",
+    category: "documents",
+    updatedAt: "2026-05-03T07:20:00.000Z",
+  },
+  {
+    id: "sample-boleto",
+    name: "boleto_internet.pdf",
+    uri: "file:///exemplos/boleto_internet.pdf",
+    size: 76800,
+    mimeType: "application/pdf",
+    type: "pdf",
+    category: "documents",
+    updatedAt: "2026-05-01T10:05:00.000Z",
+  },
+  {
+    id: "sample-tcc",
+    name: "tcc_capitulo_1.docx",
+    uri: "file:///exemplos/tcc_capitulo_1.docx",
+    size: 524288,
+    mimeType: DOCX_MIME,
+    type: "docx",
+    category: "documents",
+    updatedAt: "2026-03-20T16:40:00.000Z",
+  },
+  {
+    id: "sample-artigo",
+    name: "artigo_metodologia.pdf",
+    uri: "file:///exemplos/artigo_metodologia.pdf",
+    size: 312320,
+    mimeType: "application/pdf",
+    type: "pdf",
+    category: "documents",
+    updatedAt: "2026-02-18T13:15:00.000Z",
+  },
+  {
+    id: "sample-contrato",
+    name: "contrato_locacao.pdf",
+    uri: "file:///exemplos/contrato_locacao.pdf",
+    size: 198656,
+    mimeType: "application/pdf",
+    type: "pdf",
+    category: "documents",
+    updatedAt: "2026-01-15T09:00:00.000Z",
+  },
+  {
+    id: "sample-orcamento",
+    name: "orcamento_reforma.csv",
+    uri: "file:///exemplos/orcamento_reforma.csv",
+    size: 40960,
+    mimeType: "text/csv",
+    type: "csv",
+    category: "documents",
+    updatedAt: "2026-05-05T12:30:00.000Z",
+  },
+  {
+    id: "sample-img-camera",
+    name: "IMG_20260312.jpg",
+    uri: "file:///exemplos/IMG_20260312.jpg",
+    size: 3145728,
+    mimeType: "image/jpeg",
+    type: "image",
+    category: "images",
+    updatedAt: "2026-03-12T19:22:00.000Z",
+  },
+  {
+    id: "sample-img-familia",
+    name: "foto_familia.jpg",
+    uri: "file:///exemplos/foto_familia.jpg",
+    size: 2097152,
+    mimeType: "image/jpeg",
+    type: "image",
+    category: "images",
+    updatedAt: "2026-04-22T20:10:00.000Z",
+  },
+];
